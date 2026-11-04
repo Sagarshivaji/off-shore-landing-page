@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techgene - Premium Offshore Tech Talent</title>
+    <!-- Premium Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            navy: '#0A192F',   
+                            navyLight: '#112240', 
+                            orange: '#F97316', 
+                            orangeHover: '#EA580C', 
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-600 antialiased bg-slate-50 overflow-x-hidden">
+
+    <!-- 1. STICKY HEADER (Light Theme) -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="text-2xl font-extrabold text-brand-navy tracking-tight">TECHGENE<span class="text-brand-orange">.</span></div>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#capabilities" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Capabilities</a>
+                <a href="#process" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Process</a>
+                <a href="#results" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Results</a>
+            </nav>
+            <!-- CTA -->
+            <a href="#contact-form" class="bg-brand-orange text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/20 hover:-translate-y-0.5 hidden sm:block">Book a Call</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (Centered Typography + Asymmetric Image Grid) -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-24 bg-white relative overflow-hidden">
+        <!-- Background Accent -->
+        <div class="absolute top-0 inset-x-0 h-1/2 bg-gradient-to-b from-slate-50 to-white -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Trust Badge -->
+            <span class="inline-flex items-center py-1.5 px-4 rounded-full bg-orange-50 text-brand-orange text-xs font-bold tracking-widest uppercase mb-8 border border-orange-100">
+                <span class="w-2 h-2 rounded-full bg-brand-orange mr-2 animate-pulse"></span>
+                Offshore Tech & Talent Partner
+            </span>
+            
+            <!-- Massive Centered Headline -->
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-navy leading-[1.1] mb-6 tracking-tight max-w-4xl mx-auto">
+                Add an Offshore Delivery Arm <span class="text-brand-orange">Without Building One.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+                Extend your technology delivery capabilities with dedicated offshore engineering, QA, and AI talent—without the operational overhead.
+            </p>
+            
+            <!-- Centered CTA -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
+                <a href="#contact-form" class="bg-brand-orange text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-brand-orangeHover transition-all shadow-xl shadow-brand-orange/30 hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Book a Free Consultation
+                </a>
+                <a href="#results" class="bg-white text-brand-navy border-2 border-slate-200 px-8 py-4 rounded-lg text-lg font-bold hover:border-brand-navy transition-all w-full sm:w-auto text-center">
+                    View Case Studies
+                </a>
+            </div>
+
+            <!-- Asymmetric Image Grid (Premium Visual) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto h-[300px] md:h-[400px]">
+                <div class="col-span-1 md:col-span-1 rounded-2xl overflow-hidden shadow-lg translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-1 md:col-span-2 rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Engineering" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden shadow-lg translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Collaboration" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST BAR -->
+    <div class="bg-white border-y border-slate-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="text-xl font-black text-brand-navy">Acme Corp</div>
+                <div class="text-xl font-bold text-brand-navy tracking-tighter">NEXUS</div>
+                <div class="text-xl font-serif italic text-brand-navy">Vertex</div>
+                <div class="text-xl font-black text-brand-navy tracking-widest">GLOBAL</div>
+                <div class="text-xl font-bold text-brand-navy flex items-center"><span class="text-brand-orange mr-1">■</span>BuildCo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. CAPABILITIES (Bento Box Layout) -->
+    <section id="capabilities" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-brand-navy mb-4">Technology Talent That<br>Supports Your Delivery Goals</h2>
+                <p class="text-xl text-slate-600 font-light max-w-2xl">Expand your team's capabilities with flexible offshore support, specialized engineering skills, and delivery-focused collaboration.</p>
+            </div>
+            
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Large Feature Box (Image + Text) -->
+                <div class="md:col-span-2 bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-200 flex flex-col md:flex-row items-center gap-8 group hover:shadow-xl transition-all duration-300">
+                    <div class="md:w-1/2">
+                        <span class="text-brand-orange font-bold tracking-wider uppercase text-xs mb-3 block">Core Service</span>
+                        <h3 class="text-3xl font-bold text-brand-navy mb-4">End-to-End Offshore Delivery Support</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Extend your delivery capabilities with coordinated offshore engineering, QA, staffing, and delivery support aligned with your business requirements.</p>
+                        <ul class="space-y-2 text-sm font-medium text-slate-700">
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Full-stack development teams</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Timezone aligned collaboration</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 h-full min-h-[250px] rounded-2xl overflow-hidden">
+                         <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Delivery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Small Feature Box 1 -->
+                <div class="bg-brand-navy rounded-3xl p-8 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-brand-orange">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Flexible Team Expansion</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Expand additional delivery capacity without having to establish an offshore recruitment structure.</p>
+                    </div>
+                </div>
+
+                <!-- Small Feature Box 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-6 text-brand-orange">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Automation and Modern QA</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Support repeatable testing, smoke and regression coverage, performance validation, and release workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Wide Feature Box 3 -->
+                <div class="md:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex items-center gap-6 group hover:shadow-xl transition-all duration-300">
+                    <div class="flex-shrink-0 w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-brand-navy">
+                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">Cloud, AI, and Engineering Expertise</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Access technical capabilities across software engineering, cloud platforms, QA automation, data systems, and specialized engineering environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROCESS (Horizontal Flow) -->
+    <section id="process" class="py-24 bg-brand-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">A Delivery Approach Built<br>Around Your Requirements</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">From initial requirements to ongoing collaboration, align specialized talent with your team's goals, workflows, and delivery priorities.</p>
+            </div>
+
+            <!-- 3 Step Flow -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connecting Line (Desktop only) -->
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-white/10 -z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-brand-navy rounded-full border-4 border-brand-orange flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+                        <span class="text-3xl font-black text-white">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Align</h3>
+                    <p class="text-sm text-slate-400 px-4">We review your technical skill needs, solution requirements, project priorities, and delivery expectations.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-brand-navy rounded-full border-4 border-brand-orange flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+                        <span class="text-3xl font-black text-white">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Build</h3>
+                    <p class="text-sm text-slate-400 px-4">We identify qualified engineering, QA, automation, cloud, or AI/ML talent aligned with the engagement's technical needs.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-brand-navy rounded-full border-4 border-brand-orange flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+                        <span class="text-3xl font-black text-white">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Collaborate & Scale</h3>
+                    <p class="text-sm text-slate-400 px-4">Our talent integrates seamlessly with your existing engineering processes, scaling as your project needs evolve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CASE STUDIES (Featured Highlight Style) -->
+    <section id="results" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-brand-navy mb-4">Proven Results</h2>
+                <p class="text-lg text-slate-600">See how we've helped companies scale their engineering capacity.</p>
+            </div>
+
+            <!-- Featured Case Study Banner -->
+            <div class="bg-slate-50 rounded-[2.5rem] border border-slate-200 overflow-hidden flex flex-col lg:flex-row shadow-sm">
+                <!-- Image Side -->
+                <div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fintech Case Study" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand-navy/20 mix-blend-multiply"></div>
+                    <div class="absolute top-6 left-6 bg-brand-orange text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">Featured Case Study</div>
+                </div>
+                
+                <!-- Content Side -->
+                <div class="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                    <h3 class="text-2xl md:text-3xl font-bold text-brand-navy mb-6 leading-tight">Scaling QA Automation for a Major Platform Release</h3>
+                    <p class="text-slate-600 mb-8">A FinTech scale-up needed to accelerate their platform release. We deployed a dedicated team of offshore QA and automation engineers, integrating directly with their existing Scrum teams.</p>
+                    
+                    <!-- Metrics Grid -->
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-4xl font-extrabold text-brand-orange mb-1">~70%</div>
+                            <div class="text-sm font-semibold text-brand-navy">Faster PR reviews</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-4xl font-extrabold text-brand-orange mb-1">6 Wks</div>
+                            <div class="text-sm font-semibold text-brand-navy">To full deployment</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact-form" class="inline-flex items-center text-brand-orange font-bold hover:text-brand-orangeHover transition-colors">
+                        Discuss a similar project 
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT FORM (Clean, Full-Width Navy Section) -->
+    <section id="contact-form" class="py-24 bg-brand-navy relative overflow-hidden">
+        <!-- Abstract Background Element -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-orange/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Build Your Offshore Technology Team</h2>
+                <p class="text-slate-300 text-lg">Tell us about your requirements. Our team can discuss offshore engineering, QA, automation, cloud, and AI talent aligned with your delivery goals.</p>
+            </div>
+
+            <!-- Premium Form Card -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-brand-navy">First Name *</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-brand-navy">Last Name *</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-brand-navy">Work Email *</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="john@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-brand-navy">Technology Expertise Needed</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                <option>Select an area</option>
+                                <option>Software Engineering</option>
+                                <option>QA & Automation</option>
+                                <option>Cloud & DevOps</option>
+                                <option>AI & Machine Learning</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- High Conversion CTA -->
+                    <button type="button" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-orangeHover transition-all shadow-xl shadow-brand-orange/30 hover:-translate-y-0.5">
+                        Request a Consultation →
+                    </button>
+                    
+                    <!-- Trust / Anxiety Reducer -->
+                    <div class="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-xs text-slate-500">
+                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> 100% Confidential</span>
+                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Response within 24 hours</span>
+                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> No commitment required</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-brand-navy border-t border-white/10 py-8">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-extrabold text-white mb-4 md:mb-0 tracking-tight">TECHGENE<span class="text-brand-orange">.</span></div>
+            <div class="text-sm text-slate-400">© 2026 Techgene. All rights reserved.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
