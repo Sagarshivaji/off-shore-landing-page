@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techgene - Offshore Delivery Arm</title>
+    
+    <!-- Premium Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            navy: '#0A192F',   
+                            navyLight: '#112240', 
+                            orange: '#F97316', 
+                            orangeHover: '#EA580C', 
+                            offwhite: '#F8FAFC'
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -15px rgba(10, 25, 47, 0.05)',
+                        'premium-hover': '0 30px 60px -15px rgba(10, 25, 47, 0.1)',
+                        'orange-glow': '0 10px 30px -10px rgba(249, 115, 22, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Accordion Styles */
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+        details[open] .faq-icon { transform: rotate(45deg); }
+
+        /* Premium Grid Pattern */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 antialiased bg-white overflow-x-hidden">
+
+    <!-- 1. STICKY HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-brand-navy/95 backdrop-blur-md border-b border-white/10 transition-all shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="text-2xl font-extrabold text-white tracking-tight flex items-center">
+                <svg class="w-8 h-8 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                TECHGENE
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#capabilities" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Capabilities</a>
+                <a href="#process" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Process</a>
+                <a href="#case-studies" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Results</a>
+                <a href="#faq" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
+            </nav>
+            <a href="#contact-form" class="bg-brand-orange text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-orangeHover transition-all shadow-orange-glow hover:-translate-y-0.5 hidden sm:block">Book a Call</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (Full-Width Immersive) -->
+    <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[90vh]">
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Enterprise Team" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-navy/90 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-flex items-center py-1.5 px-4 rounded-full bg-white/10 text-brand-orange text-xs font-bold tracking-widest uppercase mb-8 border border-white/20 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange mr-2 animate-pulse"></span>
+                    Offshore Tech & Talent Partner
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                    Add an Offshore Delivery Arm <span class="text-brand-orange">Without Building One.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light">
+                    Extend your technology delivery capabilities with a dedicated offshore QA and engineering team, without building an offshore operation from scratch.
+                </p>
+                <p class="text-sm md:text-base text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Techgene helps technology services companies expand delivery capacity through specialized engineering talent, test automation, performance testing, cloud expertise and AI-assisted delivery.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact-form" class="bg-brand-orange text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-brand-orangeHover transition-all shadow-orange-glow hover:-translate-y-1">
+                        Book Your Offshore Workforce Consultation →
+                    </a>
+                    <a href="#case-studies" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
+                        View the Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. EVENT BANNER (Slim & Professional) -->
+    <div class="bg-brand-orange relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left">
+            <div class="flex items-center mb-2 sm:mb-0">
+                <span class="bg-white text-brand-orange text-xs font-bold px-2 py-1 rounded mr-3 uppercase tracking-wider">Meet Us At</span>
+                <span class="text-white font-bold text-lg">Executive Summit 2026</span>
+                <span class="hidden md:inline text-white/80 text-sm ml-4">Connect with our team to discuss offshore engineering and flexible staffing solutions.</span>
+            </div>
+            <a href="#contact-form" class="text-white font-bold text-sm underline hover:text-brand-navy transition-colors whitespace-nowrap">Connect with Techgene →</a>
+        </div>
+    </div>
+
+    <!-- 4. CAPABILITIES (Modular Grid) -->
+    <section id="capabilities" class="py-24 bg-brand-offwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold text-brand-orange tracking-widest uppercase mb-3">Our Capabilities</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-brand-navy mb-4">Technology Talent That Supports Your Delivery Goals</h3>
+                <p class="text-lg text-slate-600">Expand your team's capabilities with flexible offshore support, specialized engineering skills and delivery-focused collaboration.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">End-to-End Offshore Delivery Support</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Extend your delivery capabilities with coordinated offshore engineering, QA, staffing and delivery support aligned with your business requirements.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">Flexible Team Expansion</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Explore additional delivery capacity without having to establish an offshore recruitment and operating structure from the ground up.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">Automation and Modern QA</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Support repeatable testing, smoke and regression coverage, performance validation and efficient release workflows.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">Cloud, AI and Engineering Expertise</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Access technical capabilities across software engineering, cloud platforms, AI/ML, modern data ecosystems and specialized engineering environments.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">Delivery-Focused Collaboration</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Align team skills and responsibilities with your requirements, existing processes and client delivery objectives.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-premium border border-slate-100 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-brand-orange mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-navy mb-3">Cost-Effective</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Explore flexible offshore talent models designed to extend technical capabilities while managing staffing and delivery costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HOW WE WORK (Horizontal Process) -->
+    <section id="process" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold text-brand-orange tracking-widest uppercase mb-3">How We Work</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-brand-navy mb-4">A Delivery Approach Built Around Your Requirements</h3>
+                <p class="text-lg text-slate-600">From initial requirements to ongoing collaboration, align specialized talent with your team's goals, workflows and delivery priorities.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative flex flex-col md:flex-row gap-8">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-slate-200 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="flex-1 relative z-10 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-4 border-slate-100 flex items-center justify-center text-2xl font-extrabold text-brand-navy shadow-sm group-hover:border-brand-orange group-hover:text-brand-orange transition-colors duration-300 mb-6">01</div>
+                    <div class="text-center bg-white p-4 rounded-xl">
+                        <h4 class="text-lg font-bold text-brand-navy mb-2">Align</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Discuss requirements, technical skills, solution needs, project priorities and delivery expectations.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex-1 relative z-10 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-4 border-slate-100 flex items-center justify-center text-2xl font-extrabold text-brand-navy shadow-sm group-hover:border-brand-orange group-hover:text-brand-orange transition-colors duration-300 mb-6">02</div>
+                    <div class="text-center bg-white p-4 rounded-xl">
+                        <h4 class="text-lg font-bold text-brand-navy mb-2">Build</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Identify suitable engineering, QA, automation, cloud or AI/ML talent around the engagement's technical needs.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex-1 relative z-10 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-4 border-slate-100 flex items-center justify-center text-2xl font-extrabold text-brand-navy shadow-sm group-hover:border-brand-orange group-hover:text-brand-orange transition-colors duration-300 mb-6">03</div>
+                    <div class="text-center bg-white p-4 rounded-xl">
+                        <h4 class="text-lg font-bold text-brand-navy mb-2">Collaborate</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Support working sessions, reviews, communication and alignment with existing engineering and product stakeholders.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex-1 relative z-10 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-4 border-slate-100 flex items-center justify-center text-2xl font-extrabold text-brand-navy shadow-sm group-hover:border-brand-orange group-hover:text-brand-orange transition-colors duration-300 mb-6">04</div>
+                    <div class="text-center bg-white p-4 rounded-xl">
+                        <h4 class="text-lg font-bold text-brand-navy mb-2">Deliver</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Extend delivery capacity with structured collaboration, handovers and support across time zones.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex-1 relative z-10 group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-24 h-24 mx-auto bg-white rounded-full border-4 border-slate-100 flex items-center justify-center text-2xl font-extrabold text-brand-navy shadow-sm group-hover:border-brand-orange group-hover:text-brand-orange transition-colors duration-300 mb-6">05</div>
+                    <div class="text-center bg-white p-4 rounded-xl">
+                        <h4 class="text-lg font-bold text-brand-navy mb-2">Scale</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Explore additional skills and team capacity as your project needs and technical requirements evolve.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Approach Box -->
+            <div class="mt-16 bg-brand-navy rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between shadow-2xl" data-aos="fade-up" data-aos-delay="600">
+                <div class="mb-4 md:mb-0 md:w-3/4">
+                    <h4 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">OUR APPROACH</h4>
+                    <h5 class="text-2xl font-bold text-white mb-2">Flexible Collaboration</h5>
+                    <p class="text-slate-300 text-sm">Work toward an engagement model that complements your existing team, processes and business objectives.</p>
+                </div>
+                <a href="#contact-form" class="bg-white text-brand-navy px-6 py-3 rounded-lg font-bold hover:bg-slate-100 transition-colors shadow-lg whitespace-nowrap">Discuss Your Model →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CASE STUDIES (High Contrast Data) -->
+    <section id="case-studies" class="py-24 bg-brand-navy relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold text-brand-orange tracking-widest uppercase mb-3">Client Success Stories</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Explore Our Case Studies</h3>
+                <p class="text-slate-400">Explore examples of offshore delivery support and specialized AI/ML talent. Review each case study for its engagement details, delivery approach and reported outcomes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-brand-navyLight rounded-2xl border border-white/10 overflow-hidden flex flex-col group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Case Study 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navyLight to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded shadow-lg">Case Study 01</div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="text-2xl font-bold text-white mb-2">Offshore Delivery and Engineering Support</h4>
+                        <p class="text-slate-400 text-sm mb-6">Discover how offshore engineering talent can support delivery capacity, collaboration and technical execution.</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange"><span class="counter" data-target="70">0</span>%</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">Faster PR reviews</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange"><span class="counter" data-target="50">0</span>%</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">Overall effort reduction</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange"><span class="counter" data-target="12">0</span></div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">Dedicated team members</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange"><span class="counter" data-target="6">0</span> weeks</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">Team-building timeline</div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-6">Review the full case study for details about the engagement, delivery model, team structure and reported results.</p>
+                    </div>
+                    <div class="p-6 border-t border-white/10 bg-black/20">
+                        <a href="#contact-form" class="flex items-center justify-center text-white font-bold hover:text-brand-orange transition-colors">
+                            Download Case Study 1 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="bg-brand-navyLight rounded-2xl border border-white/10 overflow-hidden flex flex-col group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Case Study 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navyLight to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded shadow-lg">Case Study 02</div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h4 class="text-2xl font-bold text-white mb-2">Building AI Teams at Scale with Techgene</h4>
+                        <p class="text-slate-400 text-sm mb-6">Specialized offshore AI/ML talent across GenAI, RAG, ML engineering, cloud and modern data ecosystems.</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange">5+</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">AI/ML engineers placed</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange">Multiple</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">AI capabilities covered</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange">Scalable</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">Offshore talent model</div>
+                            </div>
+                            <div class="border-l-2 border-brand-orange pl-4">
+                                <div class="text-3xl font-extrabold text-brand-orange">4 areas</div>
+                                <div class="text-xs font-semibold text-slate-300 mt-1">GenAI, ML, cloud, enterprise AI</div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-6">The engagement covered GenAI and LLMs, LangChain, LangGraph, Python, ML engineering, MLflow, Azure, AWS, vector databases, RAG and modern data ecosystems.</p>
+                    </div>
+                    <div class="p-6 border-t border-white/10 bg-black/20">
+                        <a href="#contact-form" class="flex items-center justify-center text-white font-bold hover:text-brand-orange transition-colors">
+                            Download GenAI/ML Case Study <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold text-brand-orange tracking-widest uppercase mb-3">Frequently Asked Questions</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-brand-navy">Questions About Offshore Technology Teams?</h3>
+                <p class="text-slate-600 mt-2">Learn more about how flexible offshore talent can complement your engineering and delivery requirements.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="bg-slate-50 rounded-xl border border-slate-200 group hover:border-brand-orange/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <summary class="flex justify-between items-center p-6 font-bold text-brand-navy cursor-pointer">
+                        What is offshore delivery support?
+                        <svg class="w-5 h-5 text-brand-orange faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        Offshore delivery support involves extending your engineering and QA capabilities by leveraging dedicated teams located in different geographic regions. This model allows you to scale your technical workforce, access specialized talent, and accelerate delivery without the overhead of building a local infrastructure from scratch.
+                    </div>
+                </details>
+                <!-- FAQ 2 -->
+                <details class="bg-slate-50 rounded-xl border border-slate-200 group hover:border-brand-orange/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <summary class="flex justify-between items-center p-6 font-bold text-brand-navy cursor-pointer">
+                        What technology capabilities can be supported?
+                        <svg class="w-5 h-5 text-brand-orange faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        We support a wide range of capabilities including software engineering, QA automation, performance testing, cloud platforms (AWS, Azure), AI/ML (GenAI, RAG, machine learning engineering), and modern data ecosystems. Our talent is sourced to match your specific technical stack.
+                    </div>
+                </details>
+                <!-- FAQ 3 -->
+                <details class="bg-slate-50 rounded-xl border border-slate-200 group hover:border-brand-orange/50 transition-colors" data-aos="fade-up" data-aos-delay="300">
+                    <summary class="flex justify-between items-center p-6 font-bold text-brand-navy cursor-pointer">
+                        Can offshore talent work with our existing teams?
+                        <svg class="w-5 h-5 text-brand-orange faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        Absolutely. Our engagement models are designed for seamless integration. Offshore team members participate in your daily stand-ups, sprint planning, and code reviews, aligning directly with your existing workflows and product stakeholders.
+                    </div>
+                </details>
+                <!-- FAQ 4 -->
+                <details class="bg-slate-50 rounded-xl border border-slate-200 group hover:border-brand-orange/50 transition-colors" data-aos="fade-up" data-aos-delay="400">
+                    <summary class="flex justify-between items-center p-6 font-bold text-brand-navy cursor-pointer">
+                        Can the team scale as our requirements change?
+                        <svg class="w-5 h-5 text-brand-orange faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        Yes. One of the primary benefits of our offshore delivery model is flexibility. Whether you need to expand your team for a new project phase or scale down after a major release, we can adjust the team structure to match your evolving needs.
+                    </div>
+                </details>
+                <!-- FAQ 5 -->
+                <details class="bg-slate-50 rounded-xl border border-slate-200 group hover:border-brand-orange/50 transition-colors" data-aos="fade-up" data-aos-delay="500">
+                    <summary class="flex justify-between items-center p-6 font-bold text-brand-navy cursor-pointer">
+                        How can we learn more about Techgene's experience?
+                        <svg class="w-5 h-5 text-brand-orange faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
+                        You can review our detailed case studies linked in the section above, or book a direct consultation with our team. We are happy to walk you through our past engagements, delivery models, and specific technical successes.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CONTACT FORM (Split Layout) -->
+    <section id="contact-form" class="py-24 bg-brand-offwhite border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
+                
+                <!-- Left: Image & Trust Copy -->
+                <div class="lg:w-5/12 relative hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Consultation" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand-navy/80 mix-blend-multiply"></div>
+                    <div class="relative z-10 p-12 flex flex-col justify-between h-full text-white">
+                        <div>
+                            <h3 class="text-3xl font-extrabold mb-4 leading-tight">Build Your Offshore Technology Team</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-8">Tell us about your requirements. Our team can discuss offshore engineering, QA, automation, cloud and AI/ML talent aligned with your delivery goals.</p>
+                            
+                            <ul class="space-y-4 text-sm font-medium">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Specialized technology talent</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Flexible offshore workforce support</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> AI/ML, cloud and engineering capabilities</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Delivery-focused collaboration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+                            <p class="text-xs text-slate-300 italic">"Techgene provided us with a dedicated team within 2 weeks. They integrated seamlessly with our Scrum teams."</p>
+                            <p class="text-xs font-bold text-brand-orange mt-2">- VP of Engineering, FinTech Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="lg:w-7/12 p-10 md:p-16">
+                    <div class="lg:hidden mb-8">
+                        <h3 class="text-2xl font-bold text-brand-navy mb-2">Build Your Offshore Technology Team</h3>
+                        <p class="text-slate-500 text-sm">Tell us about your requirements. Our team can discuss offshore engineering, QA, and AI/ML talent.</p>
+                    </div>
+                    
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">First Name *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="First">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">Last Name *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Last">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">Work Email *</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="john@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">Company Name *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Company Inc.">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">Technology Expertise Needed</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                    <option>Select an area</option>
+                                    <option>Software Engineering</option>
+                                    <option>QA & Automation</option>
+                                    <option>Cloud & DevOps</option>
+                                    <option>AI & Machine Learning</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-brand-navy">Technology Work Needed</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                                    <option>Select a model</option>
+                                    <option>Dedicated Team</option>
+                                    <option>Staff Augmentation</option>
+                                    <option>Project-Based</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <label class="block text-sm font-bold mb-2 text-brand-navy">Project Requirements</label>
+                            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Briefly describe your project needs..."></textarea>
+                        </div>
+
+                        <button type="button" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-orangeHover transition-all shadow-orange-glow hover:-translate-y-1 mb-4">
+                            Request a Consultation →
+                        </button>
+                        
+                        <p class="text-center text-xs text-slate-500 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            100% Confidential. We respond within 24 hours.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER & FINAL CTA -->
+    <footer class="bg-brand-navy pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div data-aos="fade-up" class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Build Your Next Technology Team with Techgene</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-8 text-lg">Access specialized engineering, QA, cloud and AI/ML talent through a flexible offshore delivery model designed around your requirements.</p>
+                <a href="#contact-form" class="inline-block bg-brand-orange text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-brand-orangeHover transition-all shadow-orange-glow hover:-translate-y-1">
+                    Book Your Consultation →
+                </a>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <div class="text-xl font-extrabold text-white mb-4 md:mb-0 tracking-tight flex items-center">
+                    <svg class="w-6 h-6 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    TECHGENE
+                </div>
+                <div>© 2026 Techgene. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Number Counter Animation for Case Studies
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    </script>
+
+</body>
+</html>

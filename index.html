@@ -3,124 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techgene - Premium Offshore Tech Talent</title>
-    <!-- Premium Font -->
+    <title>Techgene - Trusted Enterprise Offshore Tech Talent</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         brand: {
-                            navy: '#0A192F',   // Deep Premium Navy
-                            navyLight: '#112240', // Lighter navy for panels
-                            orange: '#F97316', // Vibrant, trustworthy Orange
-                            orangeHover: '#EA580C', // Darker orange for hover states
-                            light: '#F8FAFC'
+                            navy: '#0A192F',   
+                            navyLight: '#112240', 
+                            orange: '#F97316', 
+                            orangeHover: '#EA580C', 
                         }
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: scroll 35s linear infinite;
+            width: max-content;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
 <body class="font-sans text-slate-600 antialiased bg-white overflow-x-hidden">
 
-    <!-- 1. STICKY HEADER (Always visible CTA) -->
-    <header class="fixed w-full top-0 z-50 bg-brand-navy/90 backdrop-blur-md border-b border-white/10 transition-all">
+    <!-- 1. STICKY HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="text-2xl font-extrabold text-white tracking-tight">TECHGENE<span class="text-brand-orange">.</span></div>
-            <div class="flex items-center space-x-8">
-                <a href="#capabilities" class="text-sm font-medium text-slate-300 hover:text-white hidden md:block transition-colors">Capabilities</a>
-                <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white hidden md:block transition-colors">Process</a>
-                <a href="#case-studies" class="text-sm font-medium text-slate-300 hover:text-white hidden md:block transition-colors">Results</a>
-                <!-- Primary CTA: Orange for max visibility -->
-                <a href="#contact-form" class="bg-brand-orange text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/30 hover:-translate-y-0.5">Book a Call</a>
+            <div class="text-2xl font-extrabold text-brand-navy tracking-tight flex items-center">
+                <svg class="w-8 h-8 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                TECHGENE
             </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#capabilities" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Capabilities</a>
+                <a href="#process" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Our Process</a>
+                <a href="#results" class="text-sm font-semibold text-slate-600 hover:text-brand-orange transition-colors">Results</a>
+            </nav>
+            <a href="#contact-form" class="bg-brand-navy text-white px-6 py-2.5 rounded text-sm font-bold hover:bg-brand-navyLight transition-all shadow-md hover:-translate-y-0.5 border border-transparent hover:border-brand-orange">Book a Consultation</a>
         </div>
     </header>
 
     <!-- 2. HERO SECTION -->
-    <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
-        <!-- Background Image with Navy Gradient Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" alt="Team collaborating" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/95 to-brand-navy/60"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <section class="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div>
-                    <span class="inline-flex items-center py-1.5 px-3 rounded-full bg-white/10 text-brand-orange text-xs font-bold tracking-widest uppercase mb-6 border border-white/10 glass-panel">
-                        <span class="w-2 h-2 rounded-full bg-brand-orange mr-2 animate-pulse"></span>
+                
+                <!-- Left: Copy & CTA -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="inline-block py-1 px-3 rounded bg-orange-100 text-brand-orange text-xs font-bold tracking-widest uppercase mb-6 border border-orange-200">
                         Offshore Tech & Talent Partner
                     </span>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                        Add an Offshore Delivery Arm <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-brand-orange">Without Building One.</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.15] mb-6 tracking-tight text-center lg:text-left">
+                        Add an Offshore Delivery Arm <span class="text-brand-orange">Without Building One.</span>
                     </h1>
-                    <p class="text-lg text-slate-300 mb-10 max-w-lg leading-relaxed font-light">
-                        Extend your technology delivery capabilities with dedicated offshore engineering, QA, and AI talent—without the operational overhead.
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed mx-auto lg:mx-0 text-center lg:text-left">
+                        Extend your technology delivery capabilities with dedicated offshore engineering, QA, and AI talent. We handle the infrastructure, you reap the rewards.
                     </p>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                        <!-- High Contrast CTA -->
-                        <a href="#contact-form" class="bg-brand-orange text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-orangeHover transition-all shadow-xl shadow-brand-orange/30 hover:-translate-y-1 w-full sm:w-auto text-center">
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                        <a href="#contact-form" class="bg-brand-orange text-white px-8 py-4 rounded text-lg font-bold hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/30 hover:-translate-y-1 text-center">
                             Book a Free Consultation
                         </a>
-                        <a href="#case-studies" class="text-sm font-semibold text-white hover:text-brand-orange transition-colors flex items-center py-4">
-                            See our results 
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="#results" class="bg-white text-brand-navy border border-slate-300 px-8 py-4 rounded text-lg font-bold hover:bg-slate-50 hover:border-brand-navy transition-all text-center">
+                            View Case Studies
                         </a>
                     </div>
+                    
+                    <!-- Trust Indicator: Rating -->
+                    <div class="mt-8 flex items-center justify-center lg:justify-start space-x-2">
+                        <div class="flex text-brand-orange">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <span class="text-sm font-semibold text-brand-navy">Rated 4.9/5 by Enterprise Clients</span>
+                    </div>
                 </div>
-                
-                <!-- Floating Glass Stats Card -->
-                <div class="hidden lg:block relative">
-                    <div class="glass-panel rounded-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-500 shadow-2xl">
-                        <h3 class="text-white font-bold mb-6 text-xl flex items-center">
-                            <svg class="w-6 h-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            A Practical Staffing Approach
-                        </h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/20 flex items-center justify-center mt-1">
-                                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-white font-semibold">Specialized Talent</h4>
-                                    <p class="text-sm text-slate-400">Access elite engineering, QA, and AI professionals.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/20 flex items-center justify-center mt-1">
-                                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-white font-semibold">Flexible Workforce</h4>
-                                    <p class="text-sm text-slate-400">Scale up or down based on your delivery roadmap.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/20 flex items-center justify-center mt-1">
-                                    <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-white font-semibold">Rigorous Screening</h4>
-                                    <p class="text-sm text-slate-400">Top 5% of talent sourced and vetted for you.</p>
-                                </div>
-                            </div>
+
+                <!-- Right: Image (Visible on mobile) -->
+                <div class="mt-16 lg:mt-0 relative block" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Enterprise Team" class="relative rounded-xl shadow-2xl w-full object-cover h-[300px] md:h-[400px] lg:h-[500px] border border-slate-200">
+                    
+                        </div>
+                        <div>
                         </div>
                     </div>
                 </div>
@@ -128,177 +122,209 @@
         </div>
     </section>
 
-    <!-- 3. TRUST BAR -->
-    <div class="bg-slate-50 border-b border-slate-200 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by engineering leaders worldwide</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="text-2xl font-black text-brand-navy">Acme Corp</div>
-                <div class="text-2xl font-bold text-brand-navy tracking-tighter">NEXUS</div>
-                <div class="text-2xl font-serif italic text-brand-navy">Vertex</div>
-                <div class="text-2xl font-black text-brand-navy tracking-widest">GLOBAL</div>
-                <div class="text-2xl font-bold text-brand-navy flex items-center"><span class="text-brand-orange mr-1">■</span>BuildCo</div>
+    <!-- 3. COMPLIANCE & TRUST BAR -->
+    <div class="bg-brand-navy border-y border-white/10 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-widest">Enterprise-Grade Security</span>
+            <div class="flex items-center space-x-8 text-slate-300">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <span class="font-bold text-sm">SOC 2 Type II</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <span class="font-bold text-sm">ISO 27001</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span class="font-bold text-sm">GDPR Compliant</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- 4. CAPABILITIES (Alternating Image/Text Layout) -->
+    <!-- 4. INFINITE LOGO MARQUEE -->
+    <div class="bg-white py-10 overflow-hidden relative border-b border-slate-100">
+        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+        
+        <div class="animate-marquee flex items-center space-x-16 px-8">
+            <span class="text-xl md:text-2xl font-black text-slate-300">Acme Corp</span>
+            <span class="text-xl md:text-2xl font-bold text-slate-300 tracking-tighter">NEXUS</span>
+            <span class="text-xl md:text-2xl font-serif italic text-slate-300">Vertex</span>
+            <span class="text-xl md:text-2xl font-black text-slate-300 tracking-widest">GLOBAL</span>
+            <span class="text-xl md:text-2xl font-bold text-slate-300">BuildCo</span>
+            <span class="text-xl md:text-2xl font-black text-slate-300">TechFlow</span>
+            <span class="text-xl md:text-2xl font-serif text-slate-300">Starlight</span>
+            
+            <span class="text-xl md:text-2xl font-black text-slate-300">Acme Corp</span>
+            <span class="text-xl md:text-2xl font-bold text-slate-300 tracking-tighter">NEXUS</span>
+            <span class="text-xl md:text-2xl font-serif italic text-slate-300">Vertex</span>
+            <span class="text-xl md:text-2xl font-black text-slate-300 tracking-widest">GLOBAL</span>
+            <span class="text-xl md:text-2xl font-bold text-slate-300">BuildCo</span>
+            <span class="text-xl md:text-2xl font-black text-slate-300">TechFlow</span>
+            <span class="text-xl md:text-2xl font-serif text-slate-300">Starlight</span>
+        </div>
+    </div>
+
+    <!-- 5. CAPABILITIES -->
     <section id="capabilities" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-20 text-center mx-auto">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-navy mb-6 leading-tight">Technology Talent That Supports Your Delivery Goals</h2>
-                <p class="text-xl text-slate-600 font-light">Expand your team's capabilities with flexible offshore support, specialized engineering skills, and delivery-focused collaboration.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">Technology Talent That Supports Your Delivery Goals</h2>
+                <p class="text-lg text-slate-600">Expand your team's capabilities with flexible offshore support, specialized engineering skills, and delivery-focused collaboration.</p>
             </div>
             
-            <div class="space-y-24">
-                <!-- Row 1 -->
-                <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
-                    <div class="relative mb-10 lg:mb-0">
-                        <!-- Decorative block changed to Orange -->
-                        <div class="absolute inset-0 bg-brand-orange rounded-2xl transform translate-x-4 translate-y-4 opacity-20"></div>
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Software Engineering" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-brand-orange hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-lg flex items-center justify-center text-brand-orange mb-6 border border-slate-100">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     </div>
-                    <div>
-                        <span class="text-brand-orange font-bold tracking-wider uppercase text-sm mb-3 block">01 / Engineering</span>
-                        <h3 class="text-3xl font-bold text-brand-navy mb-4">End-to-End Offshore Delivery Support</h3>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">Extend your delivery capabilities with coordinated offshore engineering, QA, staffing, and delivery support aligned with your business requirements.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center text-slate-700"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Full-stack development teams</li>
-                            <li class="flex items-center text-slate-700"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Timezone aligned collaboration</li>
-                        </ul>
-                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">End-to-End Delivery</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Extend your delivery capabilities with coordinated offshore engineering, QA, and staffing aligned with your business requirements.</p>
                 </div>
 
-                <!-- Row 2 (Reversed) -->
-                <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
-                    <div class="order-last lg:order-first">
-                        <span class="text-brand-orange font-bold tracking-wider uppercase text-sm mb-3 block">02 / Expansion</span>
-                        <h3 class="text-3xl font-bold text-brand-navy mb-4">Flexible Team Expansion</h3>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">Expand additional delivery capacity without having to establish an offshore recruitment and operating structure from the ground up.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center text-slate-700"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Scale in weeks, not months</li>
-                            <li class="flex items-center text-slate-700"><svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> No local recruitment overhead</li>
-                        </ul>
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-brand-orange hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-lg flex items-center justify-center text-brand-orange mb-6 border border-slate-100">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <div class="relative mb-10 lg:mb-0">
-                        <!-- Decorative block changed to Orange -->
-                        <div class="absolute inset-0 bg-brand-orange rounded-2xl transform -translate-x-4 translate-y-4 opacity-20"></div>
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Team Expansion" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Flexible Expansion</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Expand additional delivery capacity without having to establish an offshore recruitment and operating structure from the ground up.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-brand-orange hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-lg flex items-center justify-center text-brand-orange mb-6 border border-slate-100">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Automation & Modern QA</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Support repeatable testing, smoke and regression coverage, performance validation, and efficient release workflows.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. CASE STUDIES (Rich Visuals & Metrics) -->
-    <section id="case-studies" class="py-24 bg-brand-navy">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Proven Results for Global Teams</h2>
-                <p class="text-lg text-slate-400">See how we've helped companies scale their engineering capacity and accelerate delivery.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Case Study 1 -->
-                <div class="relative rounded-3xl overflow-hidden group h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tech Background" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 p-8 md:p-10 w-full">
-                        <span class="bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-lg shadow-brand-orange/30">FinTech Scale-up</span>
-                        <h3 class="text-2xl font-bold text-white mb-6">Scaling QA Automation for a Major Platform Release</h3>
-                        
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <!-- Metrics borders changed to Orange -->
-                            <div class="border-l-2 border-brand-orange pl-4">
-                                <div class="text-3xl font-extrabold text-white">~70%</div>
-                                <div class="text-sm text-slate-300">Faster PR reviews</div>
-                            </div>
-                            <div class="border-l-2 border-brand-orange pl-4">
-                                <div class="text-3xl font-extrabold text-white">6 Weeks</div>
-                                <div class="text-sm text-slate-300">To full deployment</div>
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-white hover:text-brand-orange transition-colors">
-                            Read the full case study <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="relative rounded-3xl overflow-hidden group h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cyber Security Background" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 p-8 md:p-10 w-full">
-                        <span class="bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-lg shadow-brand-orange/30">Cybersecurity</span>
-                        <h3 class="text-2xl font-bold text-white mb-6">Building a Dedicated AI & Data Engineering Pod</h3>
-                        
-                        <div class="grid grid-cols-2 gap-4 mb-8">
-                            <!-- Metrics borders changed to Orange -->
-                            <div class="border-l-2 border-brand-orange pl-4">
-                                <div class="text-3xl font-extrabold text-white">5+</div>
-                                <div class="text-sm text-slate-300">AI/ML engineers placed</div>
-                            </div>
-                            <div class="border-l-2 border-brand-orange pl-4">
-                                <div class="text-3xl font-extrabold text-white">4 Areas</div>
-                                <div class="text-sm text-slate-300">Cloud, AI, Data, RAG</div>
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="inline-flex items-center text-sm font-bold text-white hover:text-brand-orange transition-colors">
-                            Read the full case study <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
+    <!-- 6. CLIENT TESTIMONIALS (Major Trust Builder) -->
+    <section class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <svg class="w-12 h-12 text-brand-orange mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 32 32"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+            <h2 class="text-2xl md:text-3xl font-medium text-brand-navy leading-relaxed mb-8 italic">
+                "Techgene provided us with a dedicated team of QA automation engineers within 2 weeks. They integrated seamlessly with our existing Scrum teams, and our release cycles are now 70% faster. They are a true extension of our engineering department."
+            </h2>
+            <div class="flex items-center justify-center">
+                <img class="w-16 h-16 rounded-full object-cover border-2 border-brand-orange mr-4" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Client Avatar">
+                <div class="text-left">
+                    <div class="text-lg font-bold text-brand-navy">David Reynolds</div>
+                    <div class="text-sm font-semibold text-brand-orange">VP of Engineering, FinTech Corp</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. CONTACT FORM (Split Layout with High-Trust Imagery) -->
+    <!-- 7. ANIMATED RESULTS SECTION -->
+    <section id="results" class="py-24 bg-brand-navy text-white relative">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Proven Enterprise Results</h2>
+                <p class="text-slate-400 text-lg">See how we've helped companies scale their engineering capacity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-20">
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-5xl md:text-6xl font-extrabold text-brand-orange mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="70">0</span>%
+                    </div>
+                    <div class="text-lg font-semibold text-white mb-2">Faster PR Reviews</div>
+                    <p class="text-sm text-slate-400">Optimized QA automation pipelines.</p>
+                </div>
+                
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-5xl md:text-6xl font-extrabold text-brand-orange mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="6">0</span>
+                    </div>
+                    <div class="text-lg font-semibold text-white mb-2">Weeks to Deploy</div>
+                    <p class="text-sm text-slate-400">Sourced and integrated a full engineering pod.</p>
+                </div>
+                
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-5xl md:text-6xl font-extrabold text-brand-orange mb-2 flex justify-center items-center">
+                        <span class="counter" data-target="12">0</span>+
+                    </div>
+                    <div class="text-lg font-semibold text-white mb-2">Dedicated Engineers</div>
+                    <p class="text-sm text-slate-400">Seamlessly integrated into client teams.</p>
+                </div>
+            </div>
+
+            <!-- Featured Case Study Visual -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row" data-aos="fade-up" data-aos-delay="400">
+                <div class="md:w-1/2 h-64 md:h-auto relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dashboard Analytics" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded shadow-lg">Case Study</div>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-10 flex flex-col justify-center text-brand-navy">
+                    <h3 class="text-2xl font-bold mb-3">Scaling QA Automation for Major Platform Release</h3>
+                    <p class="text-slate-600 text-sm mb-4">We deployed a dedicated team of offshore QA and automation engineers, integrating directly with their existing Scrum teams to accelerate delivery.</p>
+                    <p class="text-sm italic text-slate-500 border-l-2 border-brand-orange pl-3 mb-6">"Their ability to integrate with our team and hit the ground running was exceptional."</p>
+                    <a href="#contact-form" class="inline-flex items-center text-brand-orange font-bold hover:text-brand-orangeHover transition-colors">
+                        Discuss a similar project 
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CONTACT FORM -->
     <section id="contact-form" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-brand-navy rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-200">
                 
-                <!-- Left Side: Image & Copy -->
-                <div class="lg:w-1/2 relative min-h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Professional Consultation" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/95 to-brand-navy/40"></div>
-                    <div class="relative p-10 md:p-16 flex flex-col justify-end h-full text-white">
-                        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Build Your Offshore Technology Team</h2>
-                        <p class="text-slate-300 text-lg mb-8">Tell us about your requirements. Our team can discuss offshore engineering, QA, automation, cloud, and AI talent aligned with your delivery goals.</p>
-                        
-                        <!-- Trust builders -->
-                        <div class="flex items-center space-x-6 text-sm font-semibold text-slate-300">
-                            <div class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 100% Confidential</div>
-                            <div class="flex items-center"><svg class="w-5 h-5 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 24h Response</div>
+                <!-- Left: Copy -->
+                <div class="lg:w-5/12 bg-brand-navy p-10 md:p-16 flex flex-col justify-center text-white relative" data-aos="fade-right">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-orange/20 rounded-bl-full"></div>
+                    
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Build Your Offshore Technology Team</h2>
+                    <p class="text-slate-300 text-lg mb-8">Tell us about your requirements. Our team will discuss offshore engineering, QA, and AI talent aligned with your delivery goals.</p>
+                    
+                    <!-- Security & Privacy Trust Builders -->
+                    <div class="space-y-4 text-sm font-medium bg-white/5 p-4 rounded-lg border border-white/10">
+                        <div class="flex items-center text-slate-200">
+                            <svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> 
+                            100% Confidential. NDA available.
+                        </div>
+                        <div class="flex items-center text-slate-200">
+                            <svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
+                            Response within 24 hours.
+                        </div>
+                        <div class="flex items-center text-slate-200">
+                            <svg class="w-5 h-5 text-brand-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
+                            No commitment required.
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Side: Form -->
-                <div class="lg:w-1/2 bg-white p-10 md:p-16">
+                <!-- Right: Form -->
+                <div class="lg:w-7/12 p-10 md:p-16" data-aos="fade-left">
                     <form>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-sm font-bold mb-2 text-brand-navy">First Name *</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="John">
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="John">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2 text-brand-navy">Last Name *</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="Doe">
                             </div>
                         </div>
                         
                         <div class="mb-6">
                             <label class="block text-sm font-bold mb-2 text-brand-navy">Work Email *</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="john@company.com">
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white" placeholder="john@company.com">
                         </div>
 
                         <div class="mb-8">
                             <label class="block text-sm font-bold mb-2 text-brand-navy">Technology Expertise Needed</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white appearance-none cursor-pointer">
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-all bg-slate-50 focus:bg-white appearance-none cursor-pointer">
                                 <option>Select an area</option>
                                 <option>Software Engineering</option>
                                 <option>QA & Automation</option>
@@ -307,28 +333,83 @@
                             </select>
                         </div>
 
-                        <!-- CTA Button in Orange for maximum conversion -->
-                        <button type="button" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-orangeHover transition-all shadow-xl shadow-brand-orange/30 hover:-translate-y-0.5">
+                        <button type="button" class="w-full bg-brand-orange text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/30 hover:-translate-y-1 mb-6">
                             Book My Free Consultation →
                         </button>
                         
-                        <p class="text-center text-xs text-slate-500 mt-4 flex items-center justify-center">
-                            <svg class="w-4 h-4 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                            No commitment required. We'll just discuss your needs and see if we're a fit.
-                        </p>
+                        <!-- "What Happens Next" Microcopy -->
+                        <div class="border-t border-slate-200 pt-6">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 text-center">What happens next?</p>
+                            <div class="flex justify-between text-xs text-slate-500 font-medium text-center">
+                                <div class="flex flex-col items-center w-1/3">
+                                    <div class="w-6 h-6 rounded-full bg-slate-100 text-brand-navy flex items-center justify-center mb-2 font-bold">1</div>
+                                    30-min Discovery Call
+                                </div>
+                                <div class="flex flex-col items-center w-1/3">
+                                    <div class="w-6 h-6 rounded-full bg-slate-100 text-brand-navy flex items-center justify-center mb-2 font-bold">2</div>
+                                    Custom Talent Proposal
+                                </div>
+                                <div class="flex flex-col items-center w-1/3">
+                                    <div class="w-6 h-6 rounded-full bg-slate-100 text-brand-navy flex items-center justify-center mb-2 font-bold">3</div>
+                                    Team Kickoff
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. FOOTER -->
-    <footer class="bg-white border-t border-slate-200 py-12">
+    <!-- 9. FOOTER -->
+    <footer class="bg-brand-navy py-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-2xl font-extrabold text-brand-navy mb-4 md:mb-0 tracking-tight">TECHGENE<span class="text-brand-orange">.</span></div>
-            <div class="text-sm text-slate-500">© 2026 Techgene. All rights reserved.</div>
+            <div class="text-xl font-extrabold text-white mb-4 md:mb-0 tracking-tight flex items-center">
+                <svg class="w-6 h-6 text-brand-orange mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                TECHGENE
+            </div>
+            <div class="text-sm text-slate-400">© 2026 Techgene. All rights reserved.</div>
         </div>
     </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    </script>
 
 </body>
 </html>
